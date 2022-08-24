@@ -36,29 +36,29 @@ function Presupuesto(props) {
   return (
     <form onSubmit={agregarGasto}>
       <h2 className="text-center text-2xl font-bold text-indigo-500">
-        Agrega tus gastos aqui
+        Add your expenses here
       </h2>
-      {error ? <Alert text="Ambos campos son obligatorios o verifique que ambos campos sean correctos." /> : null}
+      {error ? <Alert text="Both fields are required or verify that both fields are correct." /> : null}
       <div className="mt-5">
-        <label className="text-gray-400 font-bold">Nombre gasto</label>
+        <label className="text-gray-400 font-bold">Name expense</label>
         <input
           className="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded focus:outline-none"
           id="nombre"
           name="nombre"
           type="text"
-          placeholder="Ejemplo: Comida Semanal"
+          placeholder="Example: Weekly Meal"
           onChange={(e) => guardarNombreGasto(e.target.value)}
           value={nombregasto}
         />
       </div>
       <div className="mt-5">
-        <label className="text-gray-400 font-bold">Cantidad gasto</label>
+        <label className="text-gray-400 font-bold">Amount to spend</label>
         <input
           className="w-full p-3 mt-1 text-sm border-2 border-gray-200 rounded focus:outline-none"
           id="cantidad"
           name="cantidad"
           type="number"
-          placeholder="Ejemplo: $120"
+          placeholder="Example: $120"
           onChange={(e) => guardarCantidadGasto(parseInt(e.target.value, 10))}
           value={cantidadgasto}
         />
@@ -67,7 +67,7 @@ function Presupuesto(props) {
         <input
           type="submit"
           className="w-full inline-block px-8 py-3 text-sm font-medium text-white transition bg-indigo-600 rounded hover:shadow-xl active:bg-indigo-500 focus:outline-none focus:ring cursor-pointer"
-          value="Agregar gasto"
+          value="Add expense"
         />
       </div>
     </form>

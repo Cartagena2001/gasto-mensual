@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="mx-auto max-w-[60rem] px-5">
       <h1 className="text-center py-5 text-3xl font-bold text-indigo-500">
-        GASTOS MENSUALES
+        MONTHLY EXPENSE
       </h1>
       {preguntaPresupuesto ? (
         <Formulario
